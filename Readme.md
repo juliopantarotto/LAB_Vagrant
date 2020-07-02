@@ -14,7 +14,6 @@ Nas linhas 6,7,8 e 9, estão as configurações das maquinas virtuais:
 
     ** Obs: Caso voce altere o nome do servidor, irá precisar editar o nome tambem no final do arquivo provision/script.sh
 
-
 Na linha 20 estamos definindo o hostname das maquinas baseado nos nomes presentes no bloco machines, seguido pelo dominio "lab.example"
 
     ** Obs: Caso voce altere esse dominio, será necessário colocar o mesmo dominio tambem no arquivo provision/script.sh
@@ -28,7 +27,6 @@ Na linha 27 será criado 1 grupo no seu virtualbox chamado lab-monitoramento, on
 
 Na linha 31 será invocado 1 script que irá realizar alguns passos iniciais, como desabilitar o selinux, instalar pacotes basicos, criar 1 usuario e adicionar ao grupo de administradores, enviar 1 par de chaves rsa para evetuar login entre os servidores sem necessidade de informa senhas.
 
-
 ## Arquivo provision/script.sh
 
 Dentro do diretorio provision , está o script que irá realizar algumas configurações basicas dos servidores que serão utilizados.
@@ -40,9 +38,7 @@ As linhas 19, 20,21,35,36 e 38 , são referentes as chaves rsa que serão utiliz
 Obs: (Gere 1 par de chaves rsa ou copie as chaves rsa que voce já possui, e coloque dentro do diretorio files)
 ex para gerar novas chaves rsa: ssh-keygen -t rsa -b 4096 -m PEM
 
-
 Caso voce tenha editado os nomes das maquinas que serão criadas no arquivo Vagrantfile, altere respectivamente nas linhas linhas 45, 46, 47, 48 .
-
 
 ## Provisionamento do Lab
 
